@@ -57,12 +57,11 @@ const HomeScreen = ({username}) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        'https://calendarevents.p.rapidapi.com/calendar/0bce421f557cb8faf40d01fca65b0124896edf6a9d62e87965eba4fe6dcfdc29@group.calendar.google.com/2',
+        `https://calendarevents.p.rapidapi.com/calendar/${GOOGLE_CALENDAR_ID}/2`,
         {
           method: 'GET',
           headers: {
-            'X-RapidAPI-Key':
-              'e1abb7b6a2msh2dff4d4a19bb26dp11d6d8jsn29b5850b0c65',
+            'X-RapidAPI-Key': `${RAPID_API_KEY}`,
             'X-RapidAPI-Host': 'calendarevents.p.rapidapi.com',
           },
         },
